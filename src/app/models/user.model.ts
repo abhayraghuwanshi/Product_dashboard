@@ -1,9 +1,5 @@
-export interface User {
+export interface IObject {
     id: number;
     name: string; 
     status: string;
-    Agent: string;
-    orderingDate:string;
-    deliveryDate:string;
-    orderDiscription:string;
   }

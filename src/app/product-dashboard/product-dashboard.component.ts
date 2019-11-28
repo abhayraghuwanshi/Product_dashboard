@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../models/user.model'
+import { IObject } from '../models/user.model'
 import { UserService } from '../service/user.service';
 import { DataSource } from '@angular/cdk/collections'
 
@@ -22,34 +22,32 @@ import { DataSource } from '@angular/cdk/collections'
 
 export class ProductDashboardComponent implements OnInit {
 
- 
-  dataSource = new UserDataSource(this.userService)
-  
-  displayedColumns: string[] = ['id', 'name', 'status', 'Agent', 'orderingDate', 'deliveryDate','orderDiscription'];
-  
-  constructor(private userService : UserService){}
-   
+  public orders= []
+  constructor(private _getuser: UserService){}
   ngOnInit()  {
+    this._getuser.getUser()
+    .subscribe(data => this.orders = data);
   }
+
 
 }
 
-export class UserDataSource extends DataSource<any>{
+// export class UserDataSource extends DataSource<any>{
   
 
-  constructor(private userService: UserService){
-  super();
-  }
+//   constructor(private userService: UserService){
+//   super();
+//   }
 
-  connect(): Observable <User[]> {
-    return  this.userService.getUser();
-  }
+//   connect(): Observable <User[]> {
+//     return  this.userService.getUser();
+//   }
 
-  disconnect(collectionViewer: import("@angular/cdk/collections").CollectionViewer): void {
-    throw new Error("Method not implemented.");
-  }
+//   disconnect(collectionViewer: import("@angular/cdk/collections").CollectionViewer): void {
+//     throw new Error("Method not implemented.");
+//   }
 
-}
+
 // import { Component, OnInit } from '@angular/core';
 
 // export interface dashboardElement {
