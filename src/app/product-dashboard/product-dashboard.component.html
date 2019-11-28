@@ -3,41 +3,45 @@
  
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let user"> {{user.id}} </td>
+      <td mat-cell *matCellDef="let order"> {{order.id}} </td>
     </ng-container>
   
 
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Customer Name </th>
-      <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+      <td mat-cell *matCellDef="let order"> {{order.name}} </td>
     </ng-container>
   
 
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef> Status </th>
-      <td mat-cell *matCellDef="let user"> {{user.status}} </td>
+      <td mat-cell *matCellDef="let order"> {{order.status}} </td>
     </ng-container>
   
     <!-- Symbol Column -->
     <ng-container matColumnDef="orderingDate">
       <th mat-header-cell *matHeaderCellDef> Odering Date</th>
-      <td mat-cell *matCellDef="let user"> {{user.orderingDate}} </td>
+      <td mat-cell *matCellDef="let order"> {{order.orderingDate}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="deliveryDate">
+    <ng-container matColumnDef="expectedCusDelDate">
         <th mat-header-cell *matHeaderCellDef> Delivery Date</th>
-        <td mat-cell *matCellDef="let user"> {{user.deliveryDate}} </td>
+        <td mat-cell *matCellDef="let order"> {{order.expectedCusDelDate}} </td>
       </ng-container>
+
 
       <ng-container matColumnDef="Agent">
         <th mat-header-cell *matHeaderCellDef> Agent Name</th>
-        <td mat-cell *matCellDef="let user"> {{user.Agent}} </td>
+        <td mat-cell *matCellDef="let order"> {{order.Agent}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="orderDiscription">
-        <th mat-header-cell *matHeaderCellDef> Order Discription</th>
-        <td mat-cell *matCellDef="let user"> {{user.orderDiscription}} </td>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Order Description</th>
+        <td mat-cell *matCellDef="let order"> {{order.description}} </td>
       </ng-container>
+  
+    
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

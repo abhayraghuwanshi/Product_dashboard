@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+
+  // readonly ROOT_URL='https://jsonplaceholder.typicode.com/posts';
+  // posts:any;
+
+  // constructor(private http: HttpClient){}
+  // getPosts(){
+  //   this.posts= this.http.get(this.ROOT_URL)
+
+  //}
+//   readonly ROOT_URL='https://eagle-api.technifybiz.com/orders/1';
+//   orders:any;
+
+//   constructor(private http: HttpClient){}
+//   getPosts(){
+//   this.orders= this.http.get(this.ROOT_URL)
+// }
 }

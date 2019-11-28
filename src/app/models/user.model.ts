@@ -2,8 +2,8 @@ export interface User {
     id: number;
     name: string; 
     status: string;
-    Agent: string;
+    createdBy: string;
     orderingDate:string;
-    deliveryDate:string;
-    orderDiscription:string;
+    expectedCusDelDate:string;
+    description:string;
   }

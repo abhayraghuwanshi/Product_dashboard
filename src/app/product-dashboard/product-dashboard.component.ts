@@ -25,18 +25,18 @@ export class ProductDashboardComponent implements OnInit {
  
   dataSource = new UserDataSource(this.userService)
   
-  displayedColumns: string[] = ['id', 'name', 'status', 'Agent', 'orderingDate', 'deliveryDate','orderDiscription'];
+  displayedColumns: string[] = ['id', 'name', 'status', 'Agent', 'orderingDate', 'expectedCusDelDate','description'];
   
-  constructor(private userService : UserService){}
-   
+  constructor(private userService : UserService){};
+ 
   ngOnInit()  {
+ 
   }
 
 }
 
 export class UserDataSource extends DataSource<any>{
   
-
   constructor(private userService: UserService){
   super();
   }
