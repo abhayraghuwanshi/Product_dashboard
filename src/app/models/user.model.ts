@@ -2,8 +2,10 @@ export interface User {
     id: number;
     name: string; 
     status: string;
-    createdBy: string;
-    orderingDate:string;
+    // _link: {
+    //   createdBy:string;
+    // };
+    created:string;
     expectedCusDelDate:string;
     description:string;
   }

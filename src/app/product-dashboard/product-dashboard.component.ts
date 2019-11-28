@@ -25,7 +25,7 @@ export class ProductDashboardComponent implements OnInit {
  
   dataSource = new UserDataSource(this.userService)
   
-  displayedColumns: string[] = ['id', 'name', 'status', 'Agent', 'orderingDate', 'expectedCusDelDate','description'];
+  displayedColumns: string[] = ['id', 'name', 'status', 'created', 'expectedCusDelDate','description'];
   
   constructor(private userService : UserService){};
  
